@@ -2,8 +2,7 @@ import avyan from "../src/assets/avyan.jpg";
 import bharosa from "../src/assets/bharosa.jpg";
 import koyaemer from "../src/assets/koyaemer.jpg";
 import mml from "../src/assets/mml.png";
-import { MarqueeDemo } from "./components/marquee";
-import { MyDock } from "./components/my-dock";
+import { TimelineDemo } from "./components/timeline";
 import { Badge } from "./components/ui/badge";
 
 import WorkContainer from "./components/work-container";
@@ -54,8 +53,8 @@ export default function App() {
             <div className="flex-col">
               <h1 className="font-sans text-4xl font-bold">Hi, I'm Kyle 👋</h1>
               <p className="">
-                Software Engineer. I love building things and helping people.
-                Very active on Facebook.
+                Software Engineer passionate about creating innovative solutions
+                and making a positive impact.
               </p>
             </div>
             <img
@@ -86,8 +85,14 @@ export default function App() {
             <span className="text-[#344CB7] underline cursor-pointer">
               Flutter developer.
             </span>
-          </p>{" "}
-          <h3 className="font-bold text-[20px] mb-[16px]" id="work">
+          </p>
+          <h3 className="font-bold text-[20px] mt-[40px] mb-[16px]" id="skill">
+            Skills
+          </h3>
+          {skills.map((skill) => {
+            return <Badge className="mr-[8px]">{skill}</Badge>;
+          })}
+          <h3 className="font-bold text-[20px] mb-[16px] mt-[40px]" id="work">
             Work Experience
           </h3>
           <WorkContainer
@@ -108,6 +113,7 @@ export default function App() {
             description="Mobile App Developer"
             date="August 2022 - December 2022"
           />
+          <TimelineDemo />
           <h3 className="font-bold text-[20px] mt-[40px] mb-[16px]">
             Testimonials
           </h3>
@@ -124,20 +130,12 @@ export default function App() {
               );
             })}
           </div>
-          <h3 className="font-bold text-[20px] mt-[40px] mb-[16px]" id="skill">
-            Skills
-          </h3>
-          {skills.map((skill) => {
-            return <Badge className="mr-[8px]">{skill}</Badge>;
-          })}
+          {/*          
           <h1 className="mt-[40px] mb-[30px] font-bold text-[32px] flex justify-center">
             Check out my latest work
-          </h1>
-          <MarqueeDemo />
+          </h1> */}
+          {/* <MarqueeDemo /> */}
         </div>
-      </div>
-      <div className="sticky bottom-4 left-0 right-0 flex justify-center">
-        <MyDock />
       </div>
     </div>
   );

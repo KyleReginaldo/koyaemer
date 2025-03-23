@@ -1,15 +1,13 @@
 "use client";
 
-import { Briefcase, ChartNoAxesGantt, Download, House } from "lucide-react";
 import React from "react";
-import { Dock, DockIcon } from "./magicui/dock";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function MyDock() {
   return (
     <div className="relative">
-      <Dock iconMagnification={60} iconDistance={100}>
+      {/* <Dock iconMagnification={60} iconDistance={100}>
         <a href="#home">
           <DockIcon className="bg-black/10 dark:bg-white/10">
             <House />
@@ -28,7 +26,7 @@ export function MyDock() {
         <DockIcon className="bg-black/10 dark:bg-white/10">
           <Download />
         </DockIcon>
-      </Dock>
+      </Dock> */}
     </div>
   );
 }
